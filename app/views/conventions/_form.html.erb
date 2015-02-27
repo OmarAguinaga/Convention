@@ -1,0 +1,29 @@
+<%= form_for(@convention) do |f| %>
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %><br>
+	</p>	
+
+	<p>
+		<%= f.label :description %><br>
+		<%= f.text_field :description %><br>
+	</p>	
+
+	<p>
+		<%= f.label :initDate, "Begins" %><br>
+		<%= f.text_field :initDate %><br>
+	</p>	
+
+	<p>
+		<%= f.label :endDate, "Ends" %><br>
+		<%= f.text_field :endDate %><br>
+	</p>	
+
+	<p>
+		<%= f.label :place, "Place" %><br>
+		<%= f.text_field :place %><br>
+	</p>	
+	<%= f.submit "Create Congress"%><br>
+
+
+<% end %>
