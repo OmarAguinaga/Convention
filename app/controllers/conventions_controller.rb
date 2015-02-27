@@ -17,6 +17,9 @@ class ConventionsController < ApplicationController
 		end
 	end
 
+	def show
+		@convention = Convention.find(params[:id])
+	end
 	private
 		def convention_params
 				params.require(:convention).permit(:name,:description, :initDate, :endDate, :place)
