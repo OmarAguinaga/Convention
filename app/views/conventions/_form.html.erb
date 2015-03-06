@@ -1,4 +1,14 @@
 <%= form_for(@convention) do |f| %>
+	<% if @convention.error.any? %>
+		<h2><%= pluralize(@convention.errors.count, "error") %> prohibited this from saving</h2>
+
+		<ul>
+			<% @convention.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>	
+	<% end %>
+
 	<p>
 		<%= f.label :name %><br>
 		<%= f.text_field :name %><br>

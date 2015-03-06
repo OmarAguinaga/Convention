@@ -13,7 +13,8 @@ class ConventionsController < ApplicationController
 			flash[:notice] = "The congress has been created."
 			redirect_to @convention
 		else
-			
+			flash[:error]="The Congress could not be created"
+			render :action => "new"
 		end
 	end
 
